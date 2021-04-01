@@ -1,0 +1,13 @@
+version: '2'
+services:
+  task-management-db:
+    image: postgres:11.2
+    container_name: task-management-db
+    environment:
+      POSTGRES_DB: task-management
+      POSTGRES_USER: task-management
+      POSTGRES_PASSWORD: task-management
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5492:5432
